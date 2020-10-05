@@ -25,6 +25,10 @@
             width: 100%;
             height: 450px;
         }
+
+        #testimonio-slider {
+            height: 500px;
+        }
     </style>
 </head>
 <body>
@@ -222,17 +226,81 @@
             <div class="swiper-container" id="testimonio-slider">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide border border-gray-800 bg-primary-light">
-                        <div class="h-full max-w-64 bg-red-500 border border-gray-800 bg-red-500" style="max-width: 300px"></div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
                     </div>
-                    <div class="swiper-slide border border-gray-800 bg-primary-light">
-                        <div class="h-full max-w-64 bg-red-500 border border-gray-800 bg-red-500" style="max-width: 300px"></div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
                     </div>
-                    <div class="swiper-slide border border-gray-800 bg-primary-light">
-                        <div class="h-full max-w-64 bg-red-500 border border-gray-800 bg-red-500" style="max-width: 300px"></div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
                     </div>
-                    <div class="swiper-slide border border-gray-800 bg-primary-light">
-                        <div class="h-full max-w-64 bg-red-500 border border-gray-800 bg-red-500" style="max-width: 300px"></div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -307,15 +375,18 @@
             pagination: {
                 el: '.swiper-pagination',
             },
-            // autoplay: {
-            //     delay: 3000,
-            // }
+            autoplay: {
+                delay: 4000,
+            }
         });
 
         const testimoniosSwiper = new Swiper('#testimonio-slider', {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
+            autoplay: {
+                delay: 4000,
+            }
         })
     </script>
 </body>
