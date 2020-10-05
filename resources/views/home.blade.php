@@ -27,7 +27,7 @@
         }
 
         #testimonio-slider {
-            height: 500px;
+            height: 550px;
         }
     </style>
 </head>
@@ -110,7 +110,20 @@
                     class="swiper-slide"
                     style="background-image: url('images/hands.png'); background-size: cover;"
                 >
-                    Slide 1
+                    <div class="container h-full flex flex-col justify-center">
+                        <div class="w-1/2">
+                            <p class="font-messeri text-5xl leading-tight">Amarres efectivos</p>
+                            <p class="mt-4 text-xl">
+                                Contactanos por whatsapp
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
+                            >
+                                Whatspp +57 123 1545656
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- If we need pagination -->
@@ -236,12 +249,52 @@
                             "
                         >
                             <img
-                                src="{{ asset('images/avatar.png') }}"
+                                src="{{ asset('images/avatar3.png') }}"
                                 alt="Avatar"
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Diana Fernández</h4>
+                            <p class="mt-10 text-xl italic">En algún momento de mi vida, la desesperación y amargura se apoderaron de mi vida, pero gracias a ustedes encontré la paz y a la afinidad de mis días.</p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar2.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Fernando C.</h4>
+                            <p class="mt-10 text-xl italic">
+                                Cuando mi pareja me abandonó, sentí que se derrumbaba mi alma, pero gracias a Hechicera Hindu ella regresó siendo una persona mas razonable, más tranquila y más espiritual.
+                            </p>
+                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-primary-light">
+                        <div
+                            class="px-5 h-full border border-gray-800 text-center"
+                            style="
+                                background-image: url({{ asset('images/space_bg.png') }});
+                                background-size: 100% 130px;
+                                background-repeat: no-repeat;
+                            "
+                        >
+                            <img
+                                src="{{ asset('images/avatar4.png') }}"
+                                alt="Avatar"
+                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
+                            />
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">María Villegas</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida.</p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
                         </div>
                     </div>
@@ -259,46 +312,8 @@
                                 alt="Avatar"
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
-                    </div>
-                    <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
-                    </div>
-                    <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Petra Pérez</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida</p>
+                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Emily Camacho</h4>
+                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes mi vida mejoró, consegui un buen empleo y mi relacion va muy bien.</p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
                         </div>
                     </div>
@@ -367,11 +382,9 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        const mySwiper = new Swiper('#hero-slider', {
-            // Optional parameters
-            loop: true,
+        const heroSwiper = new Swiper('#hero-slider', {
+            // loop: true,
 
-            // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
             },
