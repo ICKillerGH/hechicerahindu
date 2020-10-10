@@ -82,39 +82,136 @@
             </div>
         </section>
 
-        <!-- Slider main container -->
         <section class="swiper-container" id="hero-slider">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <!-- Slides -->
+                {{-- Atendido por los mejores guias espirtuales --}}
                 <div
                     class="swiper-slide"
-                    style="background-image: url('images/candle.png'); background-size: cover;"
+                    style="background-image: url('images/candle.png'); background-size: cover; background-position: right"
                 >
                     <div class="container h-full flex flex-col justify-center">
-                        <div class="w-1/2">
-                            <p class="font-messeri text-5xl leading-tight">Atendido por los mejores guias espirtuales</p>
-                            <p class="mt-4 text-xl">
+                        <div class="md:w-1/2">
+                            <p class="font-messeri text-4xl md:text-5xl text-center md:text-left leading-tight">Atendido por los mejores guias espirtuales</p>
+                            <p class="mt-4 text-xl text-center md:text-left">
                                 Triunfa en la vida, el amor y la salud. Realizamos mejores hechizos con resultados inmediatos
                                 y 100% garantizados.
                             </p>
-                            <a
-                                href="#contacto"
-                                class="mt-4 px-5 py-3 inline-block bg-secondary hover:bg-secondary-light text-xl rounded-lg"
-                            >
-                                Contactanos
-                            </a>
+                            <div class="text-center md:text-left">
+                                <a
+                                    href="#contacto"
+                                    class="mt-4 px-5 py-3 inline-block bg-secondary hover:bg-secondary-light text-xl rounded-lg"
+                                    >
+                                    Contactanos
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                {{-- Amarres efectivos --}}
                 <div
                     class="swiper-slide"
                     style="background-image: url('images/hands.png'); background-size: cover;"
                 >
                     <div class="container h-full flex flex-col justify-center">
-                        <div class="w-1/2">
+                        <div class="md:w-1/2 text-center md:text-left">
                             <p class="font-messeri text-5xl leading-tight">Amarres efectivos</p>
+                            <p class="mt-4 text-xl">
+                                Contactanos por whatsapp
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
+                            >
+                                <span class="w-4 h-4 inline-block">
+                                    <x-icons.whatsapp />
+                                </span>
+                                Whatsapp +57 123 1545656
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Parejas del mismo sexo --}}
+                <div
+                    class="swiper-slide"
+                    style="background-image: url('images/gay_couple.jpg'); background-size: cover; background-position: right;"
+                >
+                    <div class="container h-full flex flex-col justify-center">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <p class="font-messeri text-5xl leading-tight">Parejas del mismo sexo</p>
+                            <p class="mt-4 text-xl">
+                                Contactanos por whatsapp
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
+                            >
+                                <span class="w-4 h-4 inline-block">
+                                    <x-icons.whatsapp />
+                                </span>
+                                Whatsapp +57 123 1545656
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Lecturas de tarot --}}
+                <div
+                    class="swiper-slide"
+                    style="background-image: url('images/tarot-slide.jpg'); background-size: cover; background-position: right;"
+                >
+                    <div class="container h-full flex flex-col justify-center">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <p class="font-messeri text-5xl leading-tight">Lecturas de tarot</p>
+                            <p class="mt-4 text-xl">
+                                Contactanos por whatsapp
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
+                            >
+                                <span class="w-4 h-4 inline-block">
+                                    <x-icons.whatsapp />
+                                </span>
+                                Whatsapp +57 123 1545656
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Rituales para la abundancia --}}
+                <div
+                    class="swiper-slide"
+                    style="background-image: url('images/wealth-slide.jpg'); background-size: cover; background-position: right;"
+                >
+                    <div class="container h-full flex flex-col justify-center">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <p class="font-messeri text-5xl leading-tight">Rituales para la abundancia</p>
+                            <p class="mt-4 text-xl">
+                                Contactanos por whatsapp
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
+                            >
+                                <span class="w-4 h-4 inline-block">
+                                    <x-icons.whatsapp />
+                                </span>
+                                Whatsapp +57 123 1545656
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Rituales poderosos para la salud --}}
+                <div
+                    class="swiper-slide"
+                    style="background-image: url('images/health-slide.jpg'); background-size: cover; background-position: right;"
+                >
+                    <div class="container h-full flex flex-col justify-center">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <p class="font-messeri text-5xl leading-tight">Rituales poderosos para la salud</p>
                             <p class="mt-4 text-xl">
                                 Contactanos por whatsapp
                             </p>
