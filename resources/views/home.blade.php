@@ -6,19 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hechicera hindu</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Nunito&family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="min-h-screen bg-primary text-white pb-12">
         {{-- Header --}}
         <div class="container">
-            <div class="flex items-center py-4">
+            <div class="flex flex-col sm:flex-row items-center py-4">
                 <h1 class="font-shrikhand text-4xl">
                     <a href="#">Hechicera hindú</a>
                 </h1>
 
-                <div class="ml-auto flex items-center">
+                <div class="sm:ml-auto flex items-center">
                     <span class="w-5 h-5">
                         <x-icons.phone />
                     </span>
@@ -28,18 +27,42 @@
         </div>
 
         {{-- Menú --}}
-        <div class="bg-primary-light">
+        <section class="bg-primary-light">
             <div class="container">
-                <div class="flex items-center">
-                    <ul class="flex">
-                        <li class="pr-4 py-5 font-semibold"><a href="#">Inicio</a></li>
-                        <li class="px-4 py-5 font-semibold"><a href="#servicios">Servicios</a></li>
-                        <li class="px-4 py-5 font-semibold"><a href="#testimonios">Testimonios</a></li>
-                        <li class="px-4 py-5 font-semibold"><a href="#">Horóscopo</a></li>
-                        <li class="px-4 py-5 font-semibold"><a href="#contacto">Contacto</a></li>
+                {{-- 64px --}}
+                <nav class="flex flex-col sm:flex-row sm:items-center">
+                    <div class="flex sm:hidden justify-between py-5">
+                        <button type="button" class="w-6 h-6 focus:outline-none" id="btnToggleMenu">
+                            <x-icons.menu />
+                        </button>
+
+                        <div>
+                            {{-- Facebook Icon --}}
+                            <a href="#" class="w-5 h-5 inline-block">
+                                <x-icons.facebook />
+                            </a>
+
+                            {{-- Instagram Icon --}}
+                            <a href="#" class="w-5 h-5 inline-block mx-2">
+                                <x-icons.instagram />
+                            </a>
+
+                            {{-- Whatsapp Icon --}}
+                            <a href="#" class="w-5 h-5 inline-block">
+                                <x-icons.whatsapp />
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="hidden sm:flex flex-col sm:flex-row bg-primary-light" id="menu">
+                        <li class="py-3 sm:pr-4 sm:py-5 font-semibold"><a href="#">Inicio</a></li>
+                        <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#servicios">Servicios</a></li>
+                        <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#testimonios">Testimonios</a></li>
+                        <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#">Horóscopo</a></li>
+                        <li class="pt-3 pb-6 sm:px-4 sm:py-5 font-semibold"><a href="#contacto">Contacto</a></li>
                     </ul>
 
-                    <div class="ml-auto">
+                    <div class="hidden sm:block ml-auto">
                         {{-- Facebook Icon --}}
                         <a href="#" class="w-5 h-5 inline-block">
                             <x-icons.facebook />
@@ -55,12 +78,12 @@
                             <x-icons.whatsapp />
                         </a>
                     </div>
-                </div>
+                </nav>
             </div>
-        </div>
+        </section>
 
         <!-- Slider main container -->
-        <div class="swiper-container" id="hero-slider">
+        <section class="swiper-container" id="hero-slider">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -110,113 +133,70 @@
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-        </div>
+        </section>
+
 
         {{-- Services --}}
-        <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary" id="servicios">Servicios</h2>
+        <section class="container">
+            <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary" id="servicios">Servicios</h2>
 
-        <div class="container">
             {{-- Amarres de amor --}}
-            <article class="flex">
-                <div class="w-1/2 pr-3">
-                    <h3 class="font-messeri text-3xl font-bold">Amarres de amor</h3>
-                    <p class="mt-3 text-lg">
-                        Si tu pareja se encuentra distante y no te presta la misma atención. <br>
-                        Los rituales de endulzamiento convierten a tu pareja en una persona amoroza y atenta nuevamente. <br>
-                        Tu pareja te verá con ojos de amor, ternura y deseo y quedará rendida a tus peticiones.
-                    </p>
-                </div>
-                <div class="w-1/2 pl-3">
-                    <img
-                        src="{{ asset('images/pareja.png') }}"
-                        alt="Parejas"
-                        class="w-full block rounded-lg object-cover"
-                        style="height: 275px"
-                    >
-                </div>
-            </article>
+            <x-service-article
+                title="Amarres de amor"
+                :image-url="asset('images/pareja.png')"
+            >
+                Si tu pareja se encuentra distante y no te presta la misma atención. <br>
+                Los rituales de endulzamiento convierten a tu pareja en una persona amoroza y atenta nuevamente. <br>
+                Tu pareja te verá con ojos de amor, ternura y deseo y quedará rendida a tus peticiones.
+            </x-service-article>
 
             {{-- Lecturas de tarot --}}
-            <article class="flex mt-16">
-                <div class="w-1/2 pl-3">
-                    <h3 class="font-messeri text-3xl font-bold">Lecturas de tarot</h3>
-                    <p class="mt-3 text-lg">
-                        Día a día las personas consultan nuestro tarot del amor para saber si esa persona especial se quedará para siempre o si las cosas marcharán bien entre ambos. <br>
-                        Consulta tu suerte en el dinero o si quieres saber que te depara el futuro laboral.
-                    </p>
-                </div>
-                <div class="w-1/2 pr-3 order-first">
-                    <img
-                        src="{{ asset('images/tarot2.png') }}"
-                        alt="Tarot"
-                        class="w-full block rounded-lg object-cover"
-                        style="height: 275px"
-                    >
-                </div>
-            </article>
+            <x-service-article
+                class="mt-16"
+                title="Lecturas de tarot"
+                :image-url="asset('images/tarot2.png')"
+                reversed
+            >
+                Día a día las personas consultan nuestro tarot del amor para saber si esa persona especial se quedará para siempre o si las cosas marcharán bien entre ambos. <br>
+                Consulta tu suerte en el dinero o si quieres saber que te depara el futuro laboral.
+            </x-service-article>
 
             {{-- Conjuros de protección --}}
-            <article class="flex mt-16">
-                <div class="w-1/2 pr-3">
-                    <h3 class="font-messeri text-3xl font-bold">Conjuros de protección</h3>
-                    <p class="mt-3 text-lg">
-                        Utilizamos la magia blanca con diferentes objetivos y la finalidad de proteger tu entorno social sin hacerle daño a nadie, limpiando tu casa y alejando todo mal que se aproxime.
-                    </p>
-                </div>
-                <div class="w-1/2 pl-3">
-                    <img
-                        src="{{ asset('images/proteccion.png') }}"
-                        alt="Protección"
-                        class="w-full block rounded-lg object-cover"
-                        style="height: 275px"
-                    >
-                </div>
-            </article>
+            <x-service-article
+                class="mt-16"
+                title="Conjuros de protección"
+                :image-url="asset('images/proteccion.png')"
+            >
+                Utilizamos la magia blanca con diferentes objetivos y la finalidad de proteger tu entorno social sin hacerle daño a nadie, limpiando tu casa y alejando todo mal que se aproxime.
+            </x-service-article>
 
             {{-- Parejas del mismo sexo --}}
-            <article class="flex mt-16">
-                <div class="w-1/2 pl-3">
-                    <h3 class="font-messeri text-3xl font-bold">Parejas del mismo sexo</h3>
-                    <p class="mt-3 text-lg">
-                        Atraemos a su Pareja del mismo sexo para una relación más duradera y estable <br>
-                        Se adaptan a la situación de la persona que desee el hechizo de amor para obtener el beneficio del cariño que este desea.
-                    </p>
-                </div>
-                <div class="w-1/2 pr-3 order-first">
-                    <img
-                        src="{{ asset('images/gay-couple.png') }}"
-                        alt="Parejas del mismo sexo"
-                        class="w-full block rounded-lg object-cover"
-                        style="height: 275px"
-                    >
-                </div>
-            </article>
+            <x-service-article
+                class="mt-16"
+                title="Parejas del mismo sexo"
+                :image-url="asset('images/gay-couple.png')"
+                reversed
+            >
+                Atraemos a su Pareja del mismo sexo para una relación más duradera y estable <br>
+                Se adaptan a la situación de la persona que desee el hechizo de amor para obtener el beneficio del cariño que este desea.
+            </x-service-article>
 
             {{-- Trabajos para la salud --}}
-            <article class="flex mt-16">
-                <div class="w-1/2 pr-3">
-                    <h3 class="font-messeri text-3xl font-bold">Trabajos para la salud</h3>
-                    <p class="mt-3 text-lg">
-                        Trabajos para mejorar su salud, agotamiento, depresión, irritabilidad, estos proveen de prosperidad y beneficios mediante rituales de evocación e invocación.
-                    </p>
-                </div>
-                <div class="w-1/2 pl-3">
-                    <img
-                        src="{{ asset('images/jose-gregorio.png') }}"
-                        alt="Trabajos para la salud"
-                        class="w-full block rounded-lg object-cover"
-                        style="height: 275px"
-                    >
-                </div>
-            </article>
+            <x-service-article
+                class="mt-16"
+                title="Trabajos para la salud"
+                :image-url="asset('images/jose-gregorio.png')"
+            >
+                Trabajos para mejorar su salud, agotamiento, depresión, irritabilidad, estos proveen de prosperidad y beneficios mediante rituales de evocación e invocación.
+            </x-service-article>
 
             <p class="font-messeri mt-16 text-center text-3xl">Y mucho más...</p>
-        </div>
+        </section>
 
         {{-- Testimonios --}}
-        <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary" id="testimonios">Lo que dicen nuestro clientes</h2>
+        <section class="container">
+            <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary leading-tight" id="testimonios">Lo que dicen nuestros clientes</h2>
 
-        <div class="container">
             <!-- Slider main container -->
             <div class="swiper-container" id="testimonio-slider">
                 <!-- Additional required wrapper -->
@@ -254,14 +234,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container">
-            {{-- Contacto --}}
+        {{-- Contacto --}}
+        <section class="container">
             <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary" id="contacto">Contacto</h2>
 
-            <div class="flex">
-                <div class="w-1/2 pr-3">
+            <div class="flex flex-col sm:flex-row">
+                <div class="sm:w-1/2 sm:pr-3">
                     <div class="mb-3">
                         <label for="name" class="block mb-1">Nombre</label>
                         <input
@@ -293,7 +273,7 @@
                         />
                     </div>
                 </div>
-                <div class="w-1/2 pl-3 flex flex-col">
+                <div class="sm:w-1/2 sm:pl-3 flex flex-col">
                     <label for="message" class="block mb-1">Mensaje</label>
                     <textarea
                         name="message"
@@ -312,29 +292,9 @@
                     Enviar mensaje
                 </button>
             </div>
-        </div>
+        </section>
     </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        const heroSwiper = new Swiper('#hero-slider', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            autoplay: {
-                delay: 4000,
-            }
-        });
-
-        const testimoniosSwiper = new Swiper('#testimonio-slider', {
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 4000,
-            }
-        })
-    </script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
