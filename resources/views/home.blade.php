@@ -57,7 +57,7 @@
                         <li class="pr-4 py-5 font-semibold"><a href="#">Inicio</a></li>
                         <li class="px-4 py-5 font-semibold"><a href="#servicios">Servicios</a></li>
                         <li class="px-4 py-5 font-semibold"><a href="#testimonios">Testimonios</a></li>
-                        <li class="px-4 py-5 font-semibold"><a href="#">Horócopo</a></li>
+                        <li class="px-4 py-5 font-semibold"><a href="#">Horóscopo</a></li>
                         <li class="px-4 py-5 font-semibold"><a href="#contacto">Contacto</a></li>
                     </ul>
 
@@ -120,7 +120,7 @@
                                 href="#"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
-                                Whatspp +57 123 1545656
+                                Whatsapp +57 123 1545656
                             </a>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                     <h3 class="font-messeri text-3xl font-bold">Amarres de amor</h3>
                     <p class="mt-3 text-lg">
                         Si tu pareja se encuentra distante y no te presta la misma atención. <br>
-                        Los rituales de endulzamiento convierten a tu pareja enuna persona amoroza y atenta nuevamente. <br>
+                        Los rituales de endulzamiento convierten a tu pareja en una persona amoroza y atenta nuevamente. <br>
                         Tu pareja te verá con ojos de amor, ternura y deseo y quedará rendida a tus peticiones.
                     </p>
                 </div>
@@ -254,7 +254,7 @@
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
                             <h4 class="mt-10 font-messeri text-2xl text-blue-400">Diana Fernández</h4>
-                            <p class="mt-10 text-xl italic">En algún momento de mi vida, la desesperación y amargura se apoderaron de mi vida, pero gracias a ustedes encontré la paz y a la afinidad de mis días.</p>
+                            <p class="mt-10 text-lg italic">En algún momento de mi vida, la desesperación y amargura se apoderaron de mi vida, pero gracias a ustedes encontré la paz y a la afinidad de mis días.</p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
                         </div>
                     </div>
@@ -273,7 +273,7 @@
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
                             <h4 class="mt-10 font-messeri text-2xl text-blue-400">Fernando C.</h4>
-                            <p class="mt-10 text-xl italic">
+                            <p class="mt-10 text-lg italic">
                                 Cuando mi pareja me abandonó, sentí que se derrumbaba mi alma, pero gracias a Hechicera Hindu ella regresó siendo una persona mas razonable, más tranquila y más espiritual.
                             </p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
@@ -294,7 +294,7 @@
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
                             <h4 class="mt-10 font-messeri text-2xl text-blue-400">María Villegas</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida.</p>
+                            <p class="mt-10 text-lg italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida.</p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
                         </div>
                     </div>
@@ -313,7 +313,7 @@
                                 class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
                             />
                             <h4 class="mt-10 font-messeri text-2xl text-blue-400">Emily Camacho</h4>
-                            <p class="mt-10 text-xl italic">Estoy muy agradecida porque gracias a ustedes mi vida mejoró, consegui un buen empleo y mi relacion va muy bien.</p>
+                            <p class="mt-10 text-lg italic">Estoy muy agradecida porque gracias a ustedes mi vida mejoró, consegui un buen empleo y mi relacion va muy bien.</p>
                             <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
                         </div>
                     </div>

@@ -3,7 +3,12 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: [
+    './resources/js/**/*.js',
+    './resources/js/**/*.vue',
+    './resources/scss/**/*.scss',
+    './resources/views/**/*.blade.php'
+  ],
   theme: {
     container: {
       center: true,
