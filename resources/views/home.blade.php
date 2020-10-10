@@ -106,6 +106,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div
                     class="swiper-slide"
                     style="background-image: url('images/hands.png'); background-size: cover;"
@@ -240,82 +241,35 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar3.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Diana Fernández</h4>
-                            <p class="mt-10 text-lg italic">En algún momento de mi vida, la desesperación y amargura se apoderaron de mi vida, pero gracias a ustedes encontré la paz y a la afinidad de mis días.</p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
+                        <x-testimony-card
+                            :avatar-url="asset('images/avatar3.png')"
+                            name="Diana Fernández"
+                            testimony="En algún momento de mi vida, la desesperación y amargura se apoderaron de mi vida, pero gracias a ustedes encontré la paz y a la afinidad de mis días."
+                        />
                     </div>
+
                     <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar2.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Fernando C.</h4>
-                            <p class="mt-10 text-lg italic">
-                                Cuando mi pareja me abandonó, sentí que se derrumbaba mi alma, pero gracias a Hechicera Hindu ella regresó siendo una persona mas razonable, más tranquila y más espiritual.
-                            </p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
+                        <x-testimony-card
+                            :avatar-url="asset('images/avatar2.png')"
+                            name="Fernando C."
+                            testimony="Cuando mi pareja me abandonó, sentí que se derrumbaba mi alma, pero gracias a Hechicera Hindu ella regresó siendo una persona mas razonable, más tranquila y más espiritual."
+                        />
                     </div>
+
                     <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar4.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">María Villegas</h4>
-                            <p class="mt-10 text-lg italic">Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida.</p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
+                        <x-testimony-card
+                            :avatar-url="asset('images/avatar4.png')"
+                            name="María Villegas"
+                            testimony="Estoy muy agradecida porque gracias a ustedes recupere el amor de mi vida."
+                        />
                     </div>
+
                     <div class="swiper-slide bg-primary-light">
-                        <div
-                            class="px-5 h-full border border-gray-800 text-center"
-                            style="
-                                background-image: url({{ asset('images/space_bg.png') }});
-                                background-size: 100% 130px;
-                                background-repeat: no-repeat;
-                            "
-                        >
-                            <img
-                                src="{{ asset('images/avatar.png') }}"
-                                alt="Avatar"
-                                class="inline-block w-32 h-32 mt-16 object-cover rounded-full"
-                            />
-                            <h4 class="mt-10 font-messeri text-2xl text-blue-400">Emily Camacho</h4>
-                            <p class="mt-10 text-lg italic">Estoy muy agradecida porque gracias a ustedes mi vida mejoró, consegui un buen empleo y mi relacion va muy bien.</p>
-                            <img src="{{ asset('images/quote.png') }}" alt="quote" class="inline-block">
-                        </div>
+                        <x-testimony-card
+                            :avatar-url="asset('images/avatar.png')"
+                            name="Emily Camacho"
+                            testimony="Estoy muy agradecida porque gracias a ustedes mi vida mejoró, consegui un buen empleo y mi relacion va muy bien."
+                        />
                     </div>
                 </div>
             </div>
@@ -383,8 +337,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const heroSwiper = new Swiper('#hero-slider', {
-            // loop: true,
-
+            loop: true,
             pagination: {
                 el: '.swiper-pagination',
             },
