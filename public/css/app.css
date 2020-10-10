@@ -21796,6 +21796,27 @@ video {
           animation: bounce 1s infinite;
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.font-messeri {
+  font-family: "El Messiri", sans-serif;
+}
+
+.font-shrikhand {
+  font-family: "Shrikhand", cursive;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 450px;
+}
+
+#testimonio-slider {
+  height: 550px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
