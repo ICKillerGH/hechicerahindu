@@ -21,7 +21,7 @@
                     <span class="w-5 h-5">
                         <x-icons.phone />
                     </span>
-                    <span class="ml-1 text-xl font-semibold">+57 123 1545656</span>
+                    <a href="https://wa.link/qntznx" target="_blank" class="ml-1 text-xl font-semibold">+57 312 6890051</a>
                 </div>
             </div>
         </div>
@@ -120,13 +120,13 @@
                                 Contactanos por whatsapp
                             </p>
                             <a
-                                href="#"
+                                href="https://wa.link/qntznx" target="_blank"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
                                 <span class="w-4 h-4 inline-block">
                                     <x-icons.whatsapp />
                                 </span>
-                                Whatsapp +57 123 1545656
+                                Whatsapp +57 312 6890051
                             </a>
                         </div>
                     </div>
@@ -144,13 +144,13 @@
                                 Contactanos por whatsapp
                             </p>
                             <a
-                                href="#"
+                                href="https://wa.link/qntznx" target="_blank"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
                                 <span class="w-4 h-4 inline-block">
                                     <x-icons.whatsapp />
                                 </span>
-                                Whatsapp +57 123 1545656
+                                Whatsapp +57 312 6890051
                             </a>
                         </div>
                     </div>
@@ -168,13 +168,13 @@
                                 Contactanos por whatsapp
                             </p>
                             <a
-                                href="#"
+                                href="https://wa.link/qntznx" target="_blank"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
                                 <span class="w-4 h-4 inline-block">
                                     <x-icons.whatsapp />
                                 </span>
-                                Whatsapp +57 123 1545656
+                                Whatsapp +57 312 6890051
                             </a>
                         </div>
                     </div>
@@ -192,13 +192,13 @@
                                 Contactanos por whatsapp
                             </p>
                             <a
-                                href="#"
+                                href="https://wa.link/qntznx" target="_blank"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
                                 <span class="w-4 h-4 inline-block">
                                     <x-icons.whatsapp />
                                 </span>
-                                Whatsapp +57 123 1545656
+                                Whatsapp +57 312 6890051
                             </a>
                         </div>
                     </div>
@@ -216,13 +216,13 @@
                                 Contactanos por whatsapp
                             </p>
                             <a
-                                href="#"
+                                href="https://wa.link/qntznx" target="_blank"
                                 class="mt-4 px-5 py-3 inline-block bg-green-600 hover:bg-green-500 text-xl rounded-lg"
                             >
                                 <span class="w-4 h-4 inline-block">
                                     <x-icons.whatsapp />
                                 </span>
-                                Whatsapp +57 123 1545656
+                                Whatsapp +57 312 6890051
                             </a>
                         </div>
                     </div>
@@ -390,6 +390,13 @@
                 </button>
             </div>
         </section>
+    </div>
+
+    <div class="fixed z-10 flex items-center justify-center" style="bottom: 2rem; right: 2rem;">
+        <span class="hidden sm:block bg-white text-sm border border-gray-400 shadow-md mr-3 px-3 py-1 rounded-md">Hola ¿Necesitas ayuda?</span>
+        <a href="https://wa.link/qntznx" target="_blank">
+            <img src="{{ asset('images/whatsapp-green.svg') }}" alt="Link a whatsapp" class="block w-12 h-12 sm:w-16 sm:h-16">
+        </a>
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>
