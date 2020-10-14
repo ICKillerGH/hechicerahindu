@@ -14,7 +14,7 @@
         {{ $beforeCss }}
     @endif
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
     @if (isset($head))
         {{ $head }}
@@ -24,7 +24,7 @@
 
     {{ $slot }}
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/admin.js') }}"></script>
 
     @if (isset($scripts))
         {{ $scripts }}

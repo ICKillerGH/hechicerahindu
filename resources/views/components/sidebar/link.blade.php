@@ -7,7 +7,7 @@
 
 <a
     href="{{ $href }}"
-    class="flex items-center w-full px-3 py-2 space-x-2 font-bold text-sm leading-6 rounded-md {{ $active ? $activeClass : $inactiveClass }}"
+    class="flex items-center w-full px-3 py-2 space-x-2 font-bold text-base leading-6 rounded-md {{ $active ? $activeClass : $inactiveClass }}"
 >
     @if (isset($icon))
         <span class="h-6 w-6">

@@ -3,6 +3,10 @@
 ])
 
 <x-html :title="$title">
+    <x-slot name="beforeCss">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    </x-slot>
+
     <div class="font-nunito flex h-screen" x-data="{ sidebarOpen: false }">
         <div
             class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"
