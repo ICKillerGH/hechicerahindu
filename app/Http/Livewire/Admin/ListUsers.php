@@ -10,6 +10,11 @@ class ListUsers extends Component
 {
     use WithPagination;
 
+    public function deleteUser($userId)
+    {
+        User::destroy($userId);
+    }
+
     public function render()
     {
         return view('livewire.admin.list-users', [

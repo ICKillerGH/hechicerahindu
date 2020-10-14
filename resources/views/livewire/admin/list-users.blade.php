@@ -1,7 +1,18 @@
 <div>
     <x-section-heading>Usuarios</x-section-heading>
 
-    <x-table>
+    <x-table
+        wire:loading.class="opacity-75 pointer-events-none"
+        x-data="{
+            onDelete(user) {
+                if (! confirm(`¿Está seguro de eliminar a ${user.name}?`)) {
+                    return;
+                }
+
+                this.$wire.deleteUser(user);
+            }
+        }"
+    >
         <x-slot name="thead">
             <x-table.th>ID</x-table.th>
             <x-table.th>Nombre</x-table.th>
@@ -19,7 +30,11 @@
                         <a href="#" class="inline-block" title="Editar usuario">
                             <x-icon.pencil-alt class="w-5 h-5" />
                         </a>
-                        <button type="button" title="Eliminar usuario">
+                        <button
+                            type="button"
+                            title="Eliminar usuario"
+                            x-on:click='onDelete(@json($user))'
+                        >
                             <x-icon.trash class="w-5 h-5" />
                         </button>
                     </x-table.td>
