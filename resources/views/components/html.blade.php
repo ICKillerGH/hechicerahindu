@@ -24,6 +24,10 @@
 
     {{ $slot }}
 
+    @if (isset($beforeScripts))
+        {{ $beforeScripts }}
+    @endif
+
     <script src="{{ asset('js/admin.js') }}"></script>
 
     @if (isset($scripts))

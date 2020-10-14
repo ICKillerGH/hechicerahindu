@@ -35,7 +35,7 @@
         </x-sidebar>
     </x-slot>
 
-    <x-admin.content class="space-y-4 bg-gray-100">
+    <x-admin.content class="space-y-4 bg-gray-50">
         <x-slot name="header">
             <x-admin.header>
                 <x-sidebar.toggler class="lg:hidden">
@@ -44,5 +44,6 @@
             </x-admin.header>
         </x-slot>
 
+        @yield('content')
     </x-admin.content>
 </x-layout.admin>

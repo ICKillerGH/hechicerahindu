@@ -5,6 +5,8 @@
 <x-html :title="$title">
     <x-slot name="beforeCss">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <livewire:styles />
     </x-slot>
 
     <div class="font-nunito flex h-screen" x-data="{ sidebarOpen: false }">
@@ -21,8 +23,12 @@
             {{ $sidebar }}
         </div>
 
-        <div class="flex-1 h-screen">
+        <div class="flex-1 flex flex-col h-screen overflow-x-hidden overflow-y-auto">
             {{ $slot }}
         </div>
     </div>
+
+    <x-slot name="beforeScripts">
+        <livewire:scripts />
+    </x-slot>
 </x-html>

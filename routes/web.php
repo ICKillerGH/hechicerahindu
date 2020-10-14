@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\ListUsers;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,9 @@ Route::get('/', function () {
 
 
 Route::prefix('/admin')->name('admin.')->group(function() {
-    Route::view('/', 'layouts.admin');
+    Route::redirect('/', 'admin/usuarios');
+
+    Route::prefix('/usuarios')->name('users.')->group(function() {
+        Route::get('/', ListUsers::class)->name('index');
+    });
 });

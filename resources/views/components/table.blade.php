@@ -17,7 +17,7 @@
                     </tbody>
                 </table>
                 @if (isset($footer))
-                    <div class="px-6 py-3 border-t border-gray-200 {{ $footerClass }}">
+                    <div class="px-6 py-3 border border-b-0 border-gray-200 {{ $footerClass }}">
                         {{ $footer }}
                     </div>
                 @endif
