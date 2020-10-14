@@ -2,8 +2,6 @@
 
 @import "tailwindcss/components";
 
-@import "tailwindcss/utilities";
-
 body {
   font-family: 'Nunito', sans-serif;
 }
@@ -24,3 +22,5 @@ body {
 #testimonio-slider {
   height: 550px;
 }
+
+@import "tailwindcss/utilities";
