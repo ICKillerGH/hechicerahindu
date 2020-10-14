@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hechicera hindu</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Nunito&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <livewire:styles />
+
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <div class="min-h-screen bg-primary text-white pb-12">
@@ -337,58 +341,7 @@
         <section class="container">
             <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary" id="contacto">Contacto</h2>
 
-            <div class="flex flex-col sm:flex-row">
-                <div class="sm:w-1/2 sm:pr-3">
-                    <div class="mb-3">
-                        <label for="name" class="block mb-1">Nombre</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            class="block w-full px-4 py-3 bg-transparent focus:outline-none border border-gray-800 focus:border-secondary rounded-full"
-                            autocomplete="off"
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="block mb-1">Teléfono</label>
-                        <input
-                            type="text"
-                            id="phone"
-                            name="phone"
-                            class="block w-full px-4 py-3 bg-transparent focus:outline-none border border-gray-800 focus:border-secondary rounded-full"
-                            autocomplete="off"
-                        />
-                    </div>
-                    <div>
-                        <label for="subject" class="block mb-1">Asunto</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            class="block w-full px-4 py-3 bg-transparent focus:outline-none border border-gray-800 focus:border-secondary rounded-full"
-                            autocomplete="off"
-                        />
-                    </div>
-                </div>
-                <div class="sm:w-1/2 sm:pl-3 flex flex-col">
-                    <label for="message" class="block mb-1">Mensaje</label>
-                    <textarea
-                        name="message"
-                        id="message"
-                        class="block w-full flex-grow px-4 py-3 bg-transparent focus:outline-none border border-gray-800 focus:border-secondary"
-                        style="border-radius: 30px;"
-                    ></textarea>
-                </div>
-            </div>
-
-            <div class="text-center mt-5">
-                <button
-                    type="submit"
-                    class="inline-block px-6 py-3 bg-secondary text-white rounded-full focus:outline-none hover:bg-secondary-light focus:shadow-outline"
-                >
-                    Enviar mensaje
-                </button>
-            </div>
+            <livewire:web.contact-form />
         </section>
     </div>
 
@@ -398,6 +351,8 @@
             <img src="{{ asset('images/whatsapp-green.svg') }}" alt="Link a whatsapp" class="block w-12 h-12 sm:w-16 sm:h-16">
         </a>
     </div>
+
+    <livewire:scripts />
 
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
