@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\ListUsers;
+use App\Http\Livewire\Admin\ListContactMessages;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,9 @@ Route::prefix('/admin')->name('admin.')->group(function() {
 
     Route::prefix('/usuarios')->name('users.')->group(function() {
         Route::get('/', ListUsers::class)->name('index');
+    });
+
+    Route::prefix('/mensajes-de-contacto')->name('contactMessages.')->group(function() {
+        Route::get('/', ListContactMessages::class)->name('index');
     });
 });
