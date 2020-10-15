@@ -3,10 +3,12 @@
 ])
 
 <x-html :title="$title">
-    <x-slot name="beforeCss">
+    <x-slot name="head">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <livewire:styles />
+
+        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     </x-slot>
 
     <div class="font-nunito flex h-screen" x-data="{ sidebarOpen: false }">
@@ -28,7 +30,9 @@
         </div>
     </div>
 
-    <x-slot name="beforeScripts">
+    <x-slot name="scripts">
         <livewire:scripts />
+
+        <script src="{{ asset('js/admin.js') }}"></script>
     </x-slot>
 </x-html>

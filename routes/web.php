@@ -23,6 +23,8 @@ Route::get('/', function () {
 Route::prefix('/admin')->name('admin.')->group(function() {
     Route::redirect('/', 'admin/usuarios');
 
+    Route::view('/login', 'auth.login');
+
     Route::prefix('/usuarios')->name('users.')->group(function() {
         Route::get('/', ListUsers::class)->name('index');
     });

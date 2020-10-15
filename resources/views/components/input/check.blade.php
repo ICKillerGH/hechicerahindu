@@ -7,7 +7,7 @@
         <span
             tabindex="0"
             class="w-4 h-4 inline-flex items-center border border-gray-500 text-white rounded focus:outline-none {{ $errorClass }}"
-            x-bind:class="{ 'bg-blue-600': checked }"
+            x-bind:class="{ 'bg-blue-500': checked }"
             x-on:keydown="if ($event.keyCode === 32) checked = ! checked;"
         >
             <x-icon.check class="w-5 h-5" x-bind:class="{ 'opacity-0': ! checked }" />
