@@ -31,6 +31,18 @@
                 <x-sidebar.toggler class="lg:hidden">
                     <x-icon.menu class="w-6 h-6 text-gray-800" />
                 </x-sidebar.toggler>
+
+                <button
+                    type="button"
+                    class="inline-flex items-center justify-center ml-auto w-10 h-10 hover:bg-gray-200 rounded-full text-gray-700 focus:outline-none focus:shadow-outline"
+                    title="Cerrar sesión"
+                    x-data
+                    x-on:click="document.getElementById('logoutForm').submit()"
+                >
+                    <x-icon.logout class="w-6 h-6" />
+                </button>
+
+                <form action="{{ route('logout') }}" method="POST" class="hidden" id="logoutForm">@csrf</form>
             </x-admin.header>
         </x-slot>
 

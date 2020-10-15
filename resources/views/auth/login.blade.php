@@ -7,7 +7,13 @@
         <div class="max-w-md w-full">
             <h1 class="mb-5 text-4xl text-center font-semibold">Iniciar sesión</h1>
 
-            <x-card>
+            <x-card
+                tag="form"
+                action="{{ url('/login') }}"
+                method="post"
+            >
+                @csrf
+
                 <x-card.content class="p-8 space-y-5 text-gray-700 text-sm">
                     <x-input.text
                         name="email"
@@ -18,7 +24,7 @@
                         autofocus
                     />
 
-                    <x-input.text
+                    <x-input.password
                         name="password"
                         label="Contraseña"
                         :error="$errors->first('password')"
@@ -32,7 +38,7 @@
                         :error="$errors->first('rememberme')"
                     />
 
-                    <x-button.indigo class="w-full">
+                    <x-button.indigo type="submit" class="w-full">
                         Ingresar
                     </x-button.indigo>
                 </x-card.content>

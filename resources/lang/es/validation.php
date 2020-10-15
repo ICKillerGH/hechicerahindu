@@ -151,6 +151,8 @@ return [
         'phone' => 'teléfono',
         'subject' => 'asunto',
         'message' => 'mensaje',
+        'email' => 'correo electrónico',
+        'password' => 'contraseña',
     ],
 
 ];
