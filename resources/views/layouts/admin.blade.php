@@ -8,29 +8,19 @@
             </x-slot>
 
             <x-sidebar.links>
-                {{-- Usuarios --}}
-                <x-sidebar.link
-                    active-class="bg-indigo-800"
-                    inactive-class="hover:bg-indigo-700 text-gray-300"
-                    :href="url('/')"
-                >
-                    <x-slot name="icon">
-                        <x-icon.users />
-                    </x-slot>
-                    Usuarios
-                </x-sidebar.link>
-
-                {{-- Peticiones de contacto --}}
-                <x-sidebar.link
-                    active-class="bg-indigo-800"
-                    inactive-class="hover:bg-indigo-700 text-gray-300"
-                    :href="url('/')"
-                >
-                    <x-slot name="icon">
-                        <x-icon.chat />
-                    </x-slot>
-                    Peticiones de contacto
-                </x-sidebar.link>
+                @foreach ($links as $link)
+                    <x-sidebar.link
+                        active-class="bg-indigo-800"
+                        inactive-class="hover:bg-indigo-700 text-gray-300"
+                        :href="$link['url']"
+                        :active="$link['active']"
+                    >
+                        <x-slot name="icon">
+                            <x-dynamic-component :component="$link['icon']" />
+                        </x-slot>
+                        {{ $link['text'] }}
+                    </x-sidebar.link>
+                @endforeach
             </x-sidebar.links>
         </x-sidebar>
     </x-slot>
