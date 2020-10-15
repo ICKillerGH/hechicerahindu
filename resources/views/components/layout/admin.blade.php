@@ -8,7 +8,7 @@
 
         <livewire:styles />
 
-        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </x-slot>
 
     <div class="font-nunito flex h-screen" x-data="{ sidebarOpen: false }">
@@ -33,6 +33,6 @@
     <x-slot name="scripts">
         <livewire:scripts />
 
-        <script src="{{ asset('js/admin.js') }}"></script>
+        <script src="{{ mix('js/admin.js') }}"></script>
     </x-slot>
 </x-html>

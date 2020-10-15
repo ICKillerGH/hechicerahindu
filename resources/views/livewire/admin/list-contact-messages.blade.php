@@ -33,7 +33,7 @@
         </x-slot>
 
         <x-slot name="tbody">
-            @foreach ($messages as $message)
+            @forelse ($messages as $message)
                 <tr>
                     <x-table.td>{{ $message->id }}</x-table.td>
                     <x-table.td>{{ $message->name }}</x-table.td>
@@ -62,7 +62,9 @@
                         </button>
                     </x-table.td>
                 </tr>
-            @endforeach
+            @empty
+                <x-table.empty />
+            @endforelse
         </x-slot>
 
         @if ($messages->hasPages())

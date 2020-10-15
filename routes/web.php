@@ -24,7 +24,7 @@ Route::get('/login', [AuthController::class, 'showForm'])->name('showForm');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::prefix('/admin')->name('admin.')->group(function() {
+Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function() {
     Route::redirect('/', 'admin/usuarios');
 
     Route::prefix('/usuarios')->name('users.')->group(function() {

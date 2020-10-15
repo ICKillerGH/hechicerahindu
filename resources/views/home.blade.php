@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>Hechicera hindu</title>
 
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Nunito&family=Shrikhand&display=swap" rel="stylesheet">
@@ -62,7 +63,7 @@
                         <li class="py-3 sm:pr-4 sm:py-5 font-semibold"><a href="#">Inicio</a></li>
                         <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#servicios">Servicios</a></li>
                         <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#testimonios">Testimonios</a></li>
-                        <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#">Horóscopo</a></li>
+                        {{-- <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#">Horóscopo</a></li> --}}
                         <li class="pt-3 pb-6 sm:px-4 sm:py-5 font-semibold"><a href="#contacto">Contacto</a></li>
                     </ul>
 
@@ -73,7 +74,7 @@
                         </a>
 
                         {{-- Instagram Icon --}}
-                        <a href="#" class="w-5 h-5 inline-block mx-2">
+                        <a href="https://www.instagram.com/hechicerahindu/" target="_blank" class="w-5 h-5 inline-block mx-2">
                             <x-icons.instagram />
                         </a>
 

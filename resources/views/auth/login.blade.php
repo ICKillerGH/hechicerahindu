@@ -1,6 +1,6 @@
 <x-html>
     <x-slot name="head">
-        <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </x-slot>
 
     <div class="font-nunito h-screen flex items-center justify-center bg-gray-50">
@@ -47,6 +47,6 @@
     </div>
 
     <x-slot name="scripts">
-        <script src="{{ asset('js/admin.js') }}"></script>
+        <script src="{{ mix('js/admin.js') }}"></script>
     </x-slot>
 </x-html>
