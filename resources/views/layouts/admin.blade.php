@@ -14,6 +14,7 @@
                         inactive-class="hover:bg-indigo-700 text-gray-300"
                         :href="$link['url']"
                         :active="$link['active']"
+                        :show="$link['show']"
                     >
                         <x-slot name="icon">
                             <x-dynamic-component :component="$link['icon']" />

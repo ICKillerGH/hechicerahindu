@@ -27,7 +27,7 @@ class AuthController extends Controller
             ValidationException::withMessages(['email' => [trans('auth.failed')]])
         );
 
-        return redirect()->route('admin.users.index');
+        return redirect()->intended($request->user()->defaultLoginRedirect());
     }
 
     public function logout(AuthFactory $auth, Session $session)

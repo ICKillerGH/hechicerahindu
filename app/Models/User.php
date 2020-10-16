@@ -23,4 +23,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //----- Methods -----//
+    public function isAdmin()
+    {
+        return $this->role === static::ROLE_ADMIN;
+    }
+
+    public function defaultLoginRedirect()
+    {
+        return [
+            static::ROLE_ADMIN => route('admin.users.index'),
+            static::ROLE_EDITOR => route('admin.contactMessages.index'),
+        ][$this->role];
+    }
+
+    public function canBeDeleted()
+    {
+        return $this->id === 1;
+    }
 }

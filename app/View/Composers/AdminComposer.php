@@ -2,6 +2,7 @@
 
 namespace App\View\Composers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminComposer
@@ -23,6 +24,7 @@ class AdminComposer
                 'active' => $this->request->route()->named([
                     'admin.users.index',
                 ]),
+                'show' => $this->request->user()->can('viewAny', User::class),
             ],
             [
                 'text' => 'Mensajes de contacto',
@@ -31,6 +33,7 @@ class AdminComposer
                 'active' => $this->request->route()->named([
                     'admin.contactMessages.index',
                 ]),
+                'show' => true,
             ],
         ]);
     }
