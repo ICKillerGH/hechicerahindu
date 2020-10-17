@@ -34,5 +34,7 @@
         <livewire:scripts />
 
         <script src="{{ mix('js/admin.js') }}"></script>
+
+        @stack('scripts')
     </x-slot>
 </x-html>

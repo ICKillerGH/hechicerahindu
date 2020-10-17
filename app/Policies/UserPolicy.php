@@ -14,6 +14,11 @@ class UserPolicy
         return $authUser->isAdmin();
     }
 
+    public function create(User $authUser)
+    {
+        return $authUser->isAdmin();
+    }
+
     public function delete(User $authUser, User $user)
     {
         if ($user->canBeDeleted())  {

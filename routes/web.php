@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\ListUsers;
+use App\Http\Livewire\Admin\CreateUser;
 use App\Http\Controllers\AuthController;
 use App\Http\Livewire\Admin\ListContactMessages;
 
@@ -29,6 +30,7 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function() {
 
     Route::prefix('/usuarios')->name('users.')->group(function() {
         Route::get('/', ListUsers::class)->name('index')->middleware('can:viewAny,App\User');
+        Route::get('/crear', CreateUser::class)->name('create')->middleware('can:create,App\User');
     });
 
     Route::prefix('/mensajes-de-contacto')->name('contactMessages.')->group(function() {

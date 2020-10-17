@@ -25,6 +25,6 @@ abstract class Input extends Component
         $this->label = $label;
         $this->fullWidth = $fullWidth;
         $this->error = $error;
-        $this->errorClass = $error ? 'border-red-500 focus:shadow-outline-red-500' : 'focus:shadow-outline-blue-500';
+        $this->errorClass = $error ? 'border-red-500 focus:shadow-outline-red-500' : 'focus:shadow-outline';
     }
 }

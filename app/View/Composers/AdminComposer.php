@@ -23,6 +23,7 @@ class AdminComposer
                 'url' => route('admin.users.index'),
                 'active' => $this->request->route()->named([
                     'admin.users.index',
+                    'admin.users.create',
                 ]),
                 'show' => $this->request->user()->can('viewAny', User::class),
             ],

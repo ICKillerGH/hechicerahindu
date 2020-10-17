@@ -42,4 +42,13 @@ class User extends Authenticatable
     {
         return $this->id === 1;
     }
+
+    //----- Static Methods -----//
+    public static function roles()
+    {
+        return [
+            static::ROLE_ADMIN,
+            static::ROLE_EDITOR,
+        ];
+    }
 }

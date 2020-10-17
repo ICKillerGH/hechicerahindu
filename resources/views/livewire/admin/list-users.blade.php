@@ -1,25 +1,23 @@
-<div>
-    <x-section-heading>Usuarios</x-section-heading>
+<div class="space-y-3">
+    <x-alert :message="session('success')" color="green" />
+
+    <x-section-heading>
+        Usuarios
+
+        <x-slot name="rightSide">
+            <x-button
+                color="green"
+                tag="a"
+                :href="route('admin.users.create')"
+            >
+                Crear usuario
+            </x-button>
+        </x-slot>
+    </x-section-heading>
 
     <x-table
         wire:loading.class="opacity-75 pointer-events-none"
-        x-data="{
-            deleteUser(e) {
-                let target = e.target;
-
-                for (let i = 0; this.elementIsNotBtn(target) && target.parentElement && i < 5 ;i++) {
-                    target = target.parentElement;
-                }
-
-                if (! confirm(`¿Está seguro de eliminar a ${target.dataset.name}?`)) {
-                    return;
-                }
-
-                this.$wire.deleteUser(target.dataset.id)
-                    .then(deleted => console.log(deleted));
-            },
-            elementIsNotBtn: el => el.tagName.toUpperCase() !== 'BUTTON'
-        }"
+        x-data="tableComponent()"
     >
         <x-slot name="thead">
             <x-table.th>ID</x-table.th>
@@ -31,7 +29,6 @@
 
         <x-slot name="tbody">
             @foreach ($users as $user)
-                {{-- <tr wire:key="{{ $user->id }}"> --}}
                 <tr>
                     <x-table.td>{{ $user->id }}</x-table.td>
                     <x-table.td>{{ $user->name }}</x-table.td>
@@ -63,4 +60,26 @@
             </x-slot>
         @endif
     </x-table>
+
+    @push('scripts')
+        <script>
+            const tableComponent = () => ({
+                deleteUser(e) {
+                    let target = e.target;
+
+                    for (let i = 0; this.elementIsNotBtn(target) && target.parentElement && i < 5 ;i++) {
+                        target = target.parentElement;
+                    }
+
+                    if (! confirm(`¿Está seguro de eliminar a ${target.dataset.name}?`)) {
+                        return;
+                    }
+
+                    this.$wire.deleteUser(target.dataset.id)
+                        .then(deleted => console.log(deleted));
+                },
+                elementIsNotBtn: el => el.tagName.toUpperCase() !== 'BUTTON'
+        });
+        </script>
+    @endpush
 </div>

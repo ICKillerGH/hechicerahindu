@@ -153,6 +153,7 @@ return [
         'message' => 'mensaje',
         'email' => 'correo electrónico',
         'password' => 'contraseña',
+        'role' => 'rol',
     ],
 
 ];
