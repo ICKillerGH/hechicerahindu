@@ -63,7 +63,7 @@
                         <li class="py-3 sm:pr-4 sm:py-5 font-semibold"><a href="#">Inicio</a></li>
                         <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#servicios">Servicios</a></li>
                         <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#testimonios">Testimonios</a></li>
-                        {{-- <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#">Horóscopo</a></li> --}}
+                        <li class="py-3 sm:px-4 sm:py-5 font-semibold"><a href="#horoscopos">Horóscopos</a></li>
                         <li class="pt-3 pb-6 sm:px-4 sm:py-5 font-semibold"><a href="#contacto">Contacto</a></li>
                     </ul>
 
@@ -89,14 +89,14 @@
 
         <section class="swiper-container" id="hero-slider">
             <div class="swiper-wrapper">
-                {{-- Atendido por los mejores guias espirtuales --}}
+                {{-- Atendido por los mejores guias espirituales --}}
                 <div
                     class="swiper-slide"
                     style="background-image: url('images/candle.png'); background-size: cover; background-position: right"
                 >
                     <div class="container h-full flex flex-col justify-center">
                         <div class="md:w-1/2">
-                            <p class="font-messeri text-4xl md:text-5xl text-center md:text-left leading-tight">Atendido por los mejores guias espirtuales</p>
+                            <p class="font-messeri text-4xl md:text-5xl text-center md:text-left leading-tight">Atendido por los mejores guias espirituales</p>
                             <p class="mt-4 text-xl text-center md:text-left">
                                 Triunfa en la vida, el amor y la salud. Realizamos mejores hechizos con resultados inmediatos
                                 y 100% garantizados.
@@ -293,6 +293,31 @@
             </x-service-article>
 
             <p class="font-messeri mt-16 text-center text-3xl">Y mucho más...</p>
+        </section>
+
+        {{-- Selecciona tu signo zodiacal --}}
+        <section class="container">
+            <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary leading-tight" id="horoscopos">Selecciona tu signo zodiacal</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 grid-rows-2 gap-4">
+                @foreach ($zodiacSigns as $sign)
+                    <div class="flex flex-col items-center p-5 space-y-4 bg-primary-light border border-gray-800">
+                        <img
+                            src="{{ asset($sign['image_url']) }}"
+                            alt="@lang($sign['name'])"
+                            class="w-24 h-24 rounded-lg border border-gray-800"
+                        />
+
+                        <div class="space-y-1 text-center">
+                            <h3 class="font-messeri text-2xl sm:text-3xl text-blue-400 leading-none">@lang($sign['name'])</h3>
+
+                            <p class="text-gray-300 text-sm sm:text-base leadidng-none">
+                                @lang($sign['range'])
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </section>
 
         {{-- Testimonios --}}
