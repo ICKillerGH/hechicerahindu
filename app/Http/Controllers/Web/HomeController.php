@@ -13,6 +13,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function horoscopes($zodiacSign)
+    {
+        return view('horoscopes', [
+            'zodiacSigns' => $this->zodiacSigns(),
+        ]);
+    }
+
     protected function zodiacSigns()
     {
         return [

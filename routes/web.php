@@ -8,6 +8,7 @@ use App\Http\Controllers\Web\HomeController;
 use App\Http\Livewire\Admin\ListContactMessages;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/horoscopos/{zodiacSign}', [HomeController::class, 'horoscopes'])->name('horoscopes');
 
 Route::get('/login', [AuthController::class, 'showForm'])->name('showForm');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
