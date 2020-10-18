@@ -7,7 +7,7 @@
             <div class="w-full lg:w-2/6 grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 @foreach($zodiacSigns as $sign)
                     <div class="flex p-4 bg-primary-light">
-                        <a href="#">
+                        <a href="{{ route('horoscopes', ['zodiacSign' => Str::slug(trans($sign['name']))]) }}">
                             <img
                                 src="{{ asset($sign['image_url']) }}"
                                 alt="@lang($sign['name'])"
@@ -17,7 +17,7 @@
 
                         <div class="flex-1 flex flex-col justify-center pl-4 text-center">
                             <h3 class="font-messeri text-2xl sm:text-3xl text-blue-400 leading-none">
-                                <a href="#">@lang($sign['name'])</a>
+                                <a href="{{ route('horoscopes', ['zodiacSign' => Str::slug(trans($sign['name']))]) }}">@lang($sign['name'])</a>
                             </h3>
 
                             <p class="text-gray-300 text-sm sm:text-base leadidng-none">
@@ -38,7 +38,7 @@
 
                     <div class="flex-1 flex flex-col justify-center text-center">
                         <h3 class="font-messeri text-5xl text-blue-400 leading-none">
-                            <a href="#">Capricornio</a>
+                            Capricornio
                         </h3>
 
                         <p class="text-gray-300 text-lg leadidng-none">
