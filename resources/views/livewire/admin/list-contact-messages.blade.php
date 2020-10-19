@@ -5,22 +5,9 @@
 
     <x-table
         wire:loading.class="opacity-75 pointer-events-none"
-        x-data="{
-            deleteMessage(messageId) {
-                if (! confirm('¿Está seguro de eliminar el mensaje?')) {
-                    return;
-                }
-
-                this.$wire.deleteMessage(messageId);
-            },
-            markAsSeen(messageId) {
-                if (! confirm('¿Está seguro de marcar este mensaje como leido?')) {
-                    return;
-                }
-
-                this.$wire.markAsSeen(messageId);
-            }
-        }"
+        x-data="tableComponent()"
+        x-on:delete="deleteMessage($event.detail)"
+        x-on:mark-as-seen="markAsSeen($event.detail)"
     >
         <x-slot name="thead">
             <x-table.th>ID</x-table.th>
@@ -34,7 +21,7 @@
 
         <x-slot name="tbody">
             @forelse ($messages as $message)
-                <tr>
+                <tr wire:key="{{ $message->id }}">
                     <x-table.td>{{ $message->id }}</x-table.td>
                     <x-table.td>{{ $message->name }}</x-table.td>
                     <x-table.td>{{ $message->phone }}</x-table.td>
@@ -47,19 +34,13 @@
                                 type="button"
                                 class="w-5 h-5"
                                 title="Marcar como visto"
-                                x-on:click="markAsSeen({{ $message->id }})"
+                                x-data
+                                x-on:click="$dispatch('mark-as-seen', {{ $message->id }})"
                             >
                                 <x-icon.check />
                             </button>
                         @endunless
-                        <button
-                            type="button"
-                            class="w-5 h-5"
-                            title="Eliminar"
-                            x-on:click="deleteMessage({{ $message->id }})"
-                        >
-                            <x-icon.trash />
-                        </button>
+                        <x-button.delete :resource-id="$message->id" />
                     </x-table.td>
                 </tr>
             @empty
@@ -74,3 +55,22 @@
         @endif
     </x-table>
 </div>
+
+@push('scripts')
+<script>
+    const tableComponent = () => ({
+        deleteMessage(messageId) {
+            confirm('¿Está seguro de eliminar el mensaje?') &&
+
+            this.$wire.deleteMessage(messageId)
+                .then(deleted => console.log(deleted));
+        },
+        markAsSeen(messageId) {
+            confirm('¿Está seguro de marcar este mensaje como leido?') &&
+
+            this.$wire.markAsSeen(messageId)
+                .then(res => console.log(res));
+        }
+    });
+</script>
+@endpush

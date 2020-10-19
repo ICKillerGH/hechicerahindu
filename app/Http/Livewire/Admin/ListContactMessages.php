@@ -12,12 +12,12 @@ class ListContactMessages extends Component
 
     public function deleteMessage($messageId)
     {
-        ContactMessage::destroy($messageId);
+        return ContactMessage::destroy($messageId) > 0;
     }
 
     public function markAsSeen($messageId)
     {
-        ContactMessage::where('id', $messageId)->update(['is_seen' => true]);
+        return ContactMessage::where('id', $messageId)->update(['is_seen' => true]) > 0;
     }
 
     public function render()
