@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\ListUsers;
 use App\Http\Livewire\Admin\CreateUser;
 use App\Http\Controllers\AuthController;
+use App\Http\Livewire\Admin\ListHoroscopes;
 use App\Http\Controllers\Web\HomeController;
+use App\Http\Livewire\Admin\CreateHoroscope;
 use App\Http\Livewire\Admin\ListContactMessages;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -24,5 +26,10 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function() {
 
     Route::prefix('/mensajes-de-contacto')->name('contactMessages.')->group(function() {
         Route::get('/', ListContactMessages::class)->name('index');
+    });
+
+    Route::prefix('/horoscopos')->name('horoscopes.')->group(function() {
+        Route::get('/', ListHoroscopes::class)->name('index');
+        Route::get('/create', CreateHoroscope::class)->name('create');
     });
 });

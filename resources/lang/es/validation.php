@@ -154,6 +154,11 @@ return [
         'email' => 'correo electrónico',
         'password' => 'contraseña',
         'role' => 'rol',
+        'zodiacSign' => 'signo zodiacal',
+        'zodiac_sign' => 'signo zodiacal',
+        'from' => 'desde',
+        'to' => 'hasta',
+        'content' => 'contenido',
     ],
 
 ];

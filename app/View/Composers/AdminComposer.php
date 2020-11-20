@@ -36,6 +36,16 @@ class AdminComposer
                 ]),
                 'show' => true,
             ],
+            [
+                'text' => 'Horóscopos',
+                'icon' => 'icon.calendar',
+                'url' => route('admin.horoscopes.index'),
+                'active' => $this->request->route()->named([
+                    'admin.horoscopes.index',
+                    'admin.horoscopes.create',
+                ]),
+                'show' => true,
+            ],
         ]);
     }
 }

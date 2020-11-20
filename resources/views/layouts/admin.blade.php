@@ -3,7 +3,7 @@
         <x-sidebar class="bg-indigo-600 text-white">
             <x-slot name="header">
                 <x-sidebar.header class="text-2xl font-semibold">
-                    {{ config('app.name') }}
+                    Dashboard
                 </x-sidebar.header>
             </x-slot>
 
