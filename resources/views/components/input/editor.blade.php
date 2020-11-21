@@ -7,7 +7,7 @@
         x-data
         x-init="() => tinymce.init({
             selector: '#{{ $id }}',
-            {{-- language: 'es', --}}
+            language: 'es_MX',
             menubar: false,
             toolbar: 'undo redo | styleselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent',
             setup(editor) {
