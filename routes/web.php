@@ -7,10 +7,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Livewire\Admin\ListHoroscopes;
 use App\Http\Controllers\Web\HomeController;
 use App\Http\Livewire\Admin\CreateHoroscope;
+use App\Support\ZodiacSigns\NameTransformer;
 use App\Http\Livewire\Admin\ListContactMessages;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/horoscopos/{zodiacSign}', [HomeController::class, 'horoscopes'])->name('horoscopes');
+Route::get('/horoscopos/{zodiacSign}', [HomeController::class, 'horoscopes'])
+    ->name('horoscopes')
+    ->where('zodiacSign', implode('|', app(NameTransformer::class)->getSpanishSlugs()));
 
 Route::get('/login', [AuthController::class, 'showForm'])->name('showForm');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
