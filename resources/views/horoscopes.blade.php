@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                <div class="text-gray-300">
+                <div class="html text-gray-300">
                     @if ($horoscope)
                         <p class="mb-4 italic text-gray-400 text-sm">{{ $horoscope->date_range_for_humans }}</p>
                         {!! $horoscope->content !!}

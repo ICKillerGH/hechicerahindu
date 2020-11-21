@@ -9,6 +9,8 @@
         <livewire:styles />
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
     </x-slot>
 
     <div class="font-nunito flex h-screen" x-data="{ sidebarOpen: false }">

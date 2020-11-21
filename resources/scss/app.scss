@@ -45,4 +45,12 @@ body {
 
 [x-cloak] { display: none; }
 
+.html {
+  & * {
+    background-color: transparent !important;
+    color: inherit !important;
+    font-family: inherit !important;
+  }
+}
+
 @import "tailwindcss/utilities";

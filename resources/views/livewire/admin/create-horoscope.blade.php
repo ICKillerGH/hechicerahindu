@@ -67,19 +67,17 @@
         </x-card.section>
 
         {{-- Contenido --}}
-        <x-card.section has-input>
+        <x-card.section>
             <x-slot name="label">
                 <label for="content">Contenido</label>
             </x-slot>
 
-            <x-input.textarea
+            <x-input.editor
                 name="content"
-                rows="6"
                 :error="$errors->first('content')"
-                full-width
-                required
                 wire:model.defer="content"
             />
+
         </x-card.section>
 
         <x-slot name="footer">
@@ -90,9 +88,6 @@
                     wire:loading
                     wire:target="save"
                 />
-                <x-button type="button" color="blue" wire:click="save(false)">
-                    Crear Horóscopo y Agregar Otro
-                </x-button>
 
                 <x-button type="submit" color="blue">
                     Crear Horóscopo
