@@ -42,7 +42,7 @@
                         </h3>
 
                         <p class="text-gray-300 text-lg leadidng-none">
-                            {{ Str::slug(__($sign['name'])) }}
+                            {{ __($zodiacSign['range']) }}
                         </p>
                     </div>
                 </div>

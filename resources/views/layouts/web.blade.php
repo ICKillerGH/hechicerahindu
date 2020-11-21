@@ -11,7 +11,7 @@
         {{-- Header --}}
         <div class="container" id="inicio">
             <div class="flex flex-col sm:flex-row items-center py-4">
-                <h1 class="font-shrikhand text-4xl">
+                <h1 class="font-shrikhand text-3xl md:text-4xl">
                     <a href="#">Sacerdotes del amor</a>
                 </h1>
 
