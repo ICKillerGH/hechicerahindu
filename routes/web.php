@@ -33,6 +33,6 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function() {
 
     Route::prefix('/horoscopos')->name('horoscopes.')->group(function() {
         Route::get('/', ListHoroscopes::class)->name('index');
-        Route::get('/create', CreateHoroscope::class)->name('create');
+        Route::get('/crear', CreateHoroscope::class)->name('create');
     });
 });
