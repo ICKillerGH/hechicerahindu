@@ -39,13 +39,13 @@
                             Contactanos por whatsapp
                         </p>
                         <a
-                            href="https://wa.link/qntznx" target="_blank"
+                            href="https://wa.link/l278u5" target="_blank"
                             class="mt-4 px-5 py-3 inline-block bg-green-500 hover:bg-green-400 text-xl rounded-lg"
                         >
                             <span class="w-4 h-4 inline-block">
                                 <x-icons.whatsapp />
                             </span>
-                            Whatsapp +57 312 6890051
+                            Whatsapp +56 9 2084 5002
                         </a>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
                             Contactanos por whatsapp
                         </p>
                         <a
-                            href="https://wa.link/qntznx" target="_blank"
+                            href="https://wa.link/l278u5" target="_blank"
                             class="mt-4 px-5 py-3 inline-block bg-green-500 hover:bg-green-400 text-xl rounded-lg"
                         >
                             <span class="w-4 h-4 inline-block">
                                 <x-icons.whatsapp />
                             </span>
-                            Whatsapp +57 312 6890051
+                            Whatsapp +56 9 2084 5002
                         </a>
                     </div>
                 </div>
@@ -87,13 +87,13 @@
                             Contactanos por whatsapp
                         </p>
                         <a
-                            href="https://wa.link/qntznx" target="_blank"
+                            href="https://wa.link/l278u5" target="_blank"
                             class="mt-4 px-5 py-3 inline-block bg-green-500 hover:bg-green-400 text-xl rounded-lg"
                         >
                             <span class="w-4 h-4 inline-block">
                                 <x-icons.whatsapp />
                             </span>
-                            Whatsapp +57 312 6890051
+                            Whatsapp +56 9 2084 5002
                         </a>
                     </div>
                 </div>
@@ -111,13 +111,13 @@
                             Contactanos por whatsapp
                         </p>
                         <a
-                            href="https://wa.link/qntznx" target="_blank"
+                            href="https://wa.link/l278u5" target="_blank"
                             class="mt-4 px-5 py-3 inline-block bg-green-500 hover:bg-green-400 text-xl rounded-lg"
                         >
                             <span class="w-4 h-4 inline-block">
                                 <x-icons.whatsapp />
                             </span>
-                            Whatsapp +57 312 6890051
+                            Whatsapp +56 9 2084 5002
                         </a>
                     </div>
                 </div>
@@ -135,13 +135,13 @@
                             Contactanos por whatsapp
                         </p>
                         <a
-                            href="https://wa.link/qntznx" target="_blank"
+                            href="https://wa.link/l278u5" target="_blank"
                             class="mt-4 px-5 py-3 inline-block bg-green-500 hover:bg-green-400 text-xl rounded-lg"
                         >
                             <span class="w-4 h-4 inline-block">
                                 <x-icons.whatsapp />
                             </span>
-                            Whatsapp +57 312 6890051
+                            Whatsapp +56 9 2084 5002
                         </a>
                     </div>
                 </div>
