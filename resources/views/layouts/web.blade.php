@@ -12,7 +12,7 @@
         <div class="container" id="inicio">
             <div class="flex flex-col sm:flex-row items-center py-4">
                 <h1 class="font-shrikhand text-3xl md:text-4xl">
-                    <a href="#">Sacerdotes del amor</a>
+                    <a href="#">Soluciones amorosas</a>
                 </h1>
 
                 <div class="sm:ml-auto flex items-center">
