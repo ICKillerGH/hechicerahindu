@@ -19,7 +19,7 @@
                     <span class="w-5 h-5">
                         <x-icons.phone />
                     </span>
-                    <a href="https://wa.link/l278u5" target="_blank" class="ml-1 text-xl font-semibold">+56 9 2084 5002</a>
+                    <a href="https://wa.link/1468wn" target="_blank" class="ml-1 text-xl font-semibold">+57 320 9983427</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                             </a>
 
                             {{-- Whatsapp Icon --}}
-                            <a href="https://wa.link/l278u5" target="_blank" class="w-5 h-5 inline-block">
+                            <a href="https://wa.link/1468wn" target="_blank" class="w-5 h-5 inline-block">
                                 <x-icons.whatsapp />
                             </a>
                         </div>
@@ -86,7 +86,7 @@
                         </a>
 
                         {{-- Whatsapp Icon --}}
-                        <a href="https://wa.link/l278u5" target="_blank" class="w-5 h-5 inline-block">
+                        <a href="https://wa.link/1468wn" target="_blank" class="w-5 h-5 inline-block">
                             <x-icons.whatsapp />
                         </a>
                     </div>
@@ -100,7 +100,7 @@
             <span class="hidden sm:block bg-white text-sm text-gray-900 border border-gray-400 shadow-md mr-3 px-3 py-1 rounded-md">
                 Hola ¿Necesitas ayuda?
             </span>
-            <a href="https://wa.link/l278u5" target="_blank">
+            <a href="https://wa.link/1468wn" target="_blank">
                 <img src="{{ asset('images/whatsapp-green.svg') }}" alt="Link a whatsapp" class="block w-12 h-12 sm:w-16 sm:h-16">
             </a>
         </div>
