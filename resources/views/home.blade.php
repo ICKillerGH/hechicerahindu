@@ -285,9 +285,13 @@
     <section class="container">
         <h2 class="font-messeri my-12 text-center text-5xl font-bold text-secondary leading-tight">Testimonios en video</h2>
 
+        <div class="flex justify-center flex-wrap sm:justify-evenly mb-6">
+            <video src="{{ asset('videos/VID-20210614-WA0006.mp4') }}" controls class="mb-3 sm:mb-0" style="max-width: 350px"></video>
+            <video src="{{ asset('videos/VID-20210605-WA0000.mp4') }}" controls style="max-width: 350px"></video>
+        </div>
         <div class="flex justify-center flex-wrap sm:justify-evenly">
-            <video src="{{ asset('videos/VID-20210604-WA0009.mp4') }}" controls class="mb-3 sm:mb-0"></video>
-            <video src="{{ asset('videos/VID-20210605-WA0000.mp4') }}" controls></video>
+            <video src="{{ asset('videos/VID-20210604-WA0009.mp4') }}" controls class="mb-3 sm:mb-0" style="max-width: 350px"></video>
+            <video src="{{ asset('videos/VID-20210614-WA0007.mp4') }}" controls style="max-width: 350px"></video>
         </div>
     </section>
 
